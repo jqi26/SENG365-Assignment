@@ -1,0 +1,13 @@
+Differences:
+
+Petitions:
+GET - Reference checks if there is a categoryId with that number, whereas mine will simply return empty if there is no categoryId with that number
+
+POST - Reference results in a 500 error for invalid end date, whereas mine creates an entry with a null end date.
+
+GET by ID: Reference uses null without quotation marks for a petition with no closingDate. Mine has null with quotation marks. References uses null for signatureCounts for a petition with no signatures, whereas mine uses 0. Order of key-value pairs are different.
+
+PATCH - Same as in POST. Reference results in a 500 error if there is no category for that ID
+
+Users:
+POST - Reference allows empty strings (" ") whereas mine does not.
